@@ -118,7 +118,7 @@
         }
       </style>
   
-  <script type="module" crossorigin src="/assets/LICENSE-c8ed837a.js"></script>
+  <script type="module" crossorigin src="/assets/LICENSE-e4c34b63.js"></script>
 <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
 
   <body class="body">
@@ -3035,7 +3035,6 @@
         </div>
         <div class="footer__wrapper-inner-social-subscribe">
           <h3 class="footer__wrapper-inner-social-subscribe-title">Subscribe to our newsletter</h3>
-          <iframe loading="lazy" src="https://nightwatch.substack.com/embed" width="80%" height="125px" style="margin-left: -12px;" id="substack"  frameborder="0" scrolling="no" title="nightwatch-substack"></iframe>
         </div>
         <div class="footer__wrapper-inner-social-links">
           <a href="https://github.com/nightwatchjs/nightwatch" target="_blank">
@@ -3048,7 +3047,7 @@
             </svg>
           </a>
           <a href="https://www.youtube.com/@nightwatch_js" target="_blank">
-            <svg role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1.5 18 13"
+            <svg role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 1.5 16 13"
               shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
               <title>Youtube</title>
               <path
@@ -3260,7 +3259,9 @@
 
   function render(template, node) {
     if (!node) return;
-    node.insertAdjacentHTML('afterend', template);
+    node.innerHTML = template;
+    node.classList.remove('integration__content');
+    node.classList.add('integration__content-mobile', 'swiper-wrapper');
   };
 </script>
 
@@ -3269,7 +3270,6 @@
   </body>
 
   <noscript id="mobile-integration-content">
-    <div class="integration__content-mobile swiper-wrapper" role="region" aria-label="Nightwatch Integrations">
       <div class="swiper-slide">
         <a href="https://mochajs.org/" class="integration__content-link" target="_blank" rel="noopener noreferrer">
           <article class="integration__content-card">
@@ -3379,7 +3379,6 @@
           </article>
         </a>
       </div>
-    </div>
   </noscript>
 
   </html>
