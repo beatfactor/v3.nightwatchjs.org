@@ -903,6 +903,75 @@
     <div class="list-group">
         
             <div class="d-flex justify-content-between">
+                <h3 id="V3.0.1" class="mb-1"><a name="V3.0.1" href="https://github.com/nightwatchjs/nightwatch/releases/tag/v3.0.1">V3.0.1</a></h3>
+                <em>Jun 21, 2023</em>
+            </div>
+            <div class="list-group-item">
+                <p class="mb-1"><p>We’re super excited to announce the release of Nightwatch v3. It that has been built around these three pillars:</p>
+<ul>
+<li><p><strong>Developer Experience</strong>: The entire experience from getting started, to writing and debugging tests, has been redesigned for speed, stability, and consistent non-flaky results.</p>
+</li>
+<li><p><strong>Mobile first</strong>: Test your web or native, iOS and Android, mobile applications on simulators, real mobile devices or a cloud grid like BrowserStack.</p>
+</li>
+<li><p><strong>One test automation framework</strong>: Run all types of tests from unit, component, and E2E to API, visual, and accessibility with a single framework.</p>
+</li>
+</ul>
+<h1 id="new-features">New features</h1>
+<h2 id="new-element-apis">New element APIs</h2>
+<p>With Nightwatch v3, we have revamped the element API to make test authoring simpler and more concise. <a href="https://nightwatchjs.org/guide/writing-tests/nightwatch-inspector.html">Learn more</a>
+More rich &amp; powerful selectors</p>
+<h2 id="new-selectors-are-introduced-as-part-of-this-latest-versions">New selectors are introduced as part of this latest versions</h2>
+<pre><code>.findByText()
+
+.findByPlaceholderText()
+
+.findByAltText()
+
+.findByRole()
+</code></pre>
+<p>You can also chain selectors to find elements that are more complex to find</p>
+<p>For E.g.</p>
+<pre><code class="language-js">browser.element.find(&#39;CSS Selector&#39;).findByText(&#39;text&#39;).click();
+</code></pre>
+<p><a href="https://nightwatchjs.org/guide/writing-tests/nightwatch-inspector.html">Guide</a></p>
+<h2 id="performance-improvements">Performance improvements</h2>
+<p>Nightwatch v3 has implemented worker threads for parallel runs and we have observed improvements of up to 25% between Nightwatch v2 &amp; v3. <a href="https://github.com/nightwatchjs/performance_benchmarking">Try it now</a></p>
+<h2 id="nightwatch-inspector">Nightwatch inspector</h2>
+<p>Nightwatch v3 introduces a point and click tool that can help you easily find selectors. It will improve your productivity of authoring tests &amp; help you find durable selectors for lower long term maintenance. <a href="https://nightwatchjs.org/guide/writing-tests/nightwatch-inspector.html">Learn more</a></p>
+<h2 id="angular-component-testing">Angular component testing</h2>
+<p>With Nightwatch v3 you can test Angular components in isolation by mounting them in the browser. <a href="https://nightwatchjs.org/guide/component-testing/testing-angular-components.html">Try it now</a></p>
+<h2 id="test-doubles">Test doubles</h2>
+<p>The unit testing with Nightwatch got an upgrade as v3 introduced <a href="https://nightwatchjs.org/guide/writing-tests/test-doubles.md">test doubles</a>. You can use mocks, stubs &amp; spies in your Nightwatch tests. </p>
+<h1 id="fixes">Fixes</h1>
+<ul>
+<li><p>Fix: incorrect build duration in HTML Report by <a href="https://github.com/vaibhavsingh97">@vaibhavsingh97</a> in <a href="https://github.com/nightwatchjs/nightwatch/pull/3658">#3658</a></p>
+</li>
+<li><p>Fix timeout issue on windows builds. by <a href="https://github.com/garg3133">@garg3133</a> in <a href="https://github.com/nightwatchjs/nightwatch/pull/3660">#3660</a></p>
+</li>
+<li><p>Fix <a href="https://github.com/nightwatchjs/nightwatch/issues/3484">#3484</a> Added elementId only param in moveTo command by <a href="https://github.com/harshit-bs">@harshit-bs</a> in <a href="https://github.com/nightwatchjs/nightwatch/pull/3517">#3517</a></p>
+</li>
+<li><p>Fix element api support in POM. by <a href="https://github.com/garg3133">@garg3133</a> in <a href="https://github.com/nightwatchjs/nightwatch/pull/3689">#3689</a></p>
+</li>
+<li><p>Fix xPath selectors to locate within elements. by <a href="https://github.com/garg3133">@garg3133</a> in <a href="https://github.com/nightwatchjs/nightwatch/pull/3672">#3672</a></p>
+</li>
+</ul>
+<h2 id="other-improvements">Other Improvements</h2>
+<ul>
+<li><p>Upgrade selenium to 4.10.0 by <a href="https://github.com/AutomatedTester">@AutomatedTester</a> in <a href="https://github.com/nightwatchjs/nightwatch/pull/3705">#3705</a></p>
+</li>
+<li><p>Types migration from definitely typed to Nightwatch project by <a href="https://github.com/beatfactor">@beatfactor</a> in <a href="https://github.com/nightwatchjs/nightwatch/pull/3714">#3714</a></p>
+</li>
+<li><p>Remove dependency on driver binaries, fallback to selenium-manager by <a href="https://github.com/swrdfish">@swrdfish</a> in <a href="https://github.com/nightwatchjs/nightwatch/pull/3717">#3717</a></p>
+</li>
+<li><p>Add the ability to rerun failed tests by <a href="https://github.com/prudhvi22">@prudhvi22</a> in <a href="https://github.com/nightwatchjs/nightwatch/pull/3703">#3703</a></p>
+</li>
+</ul>
+<h2 id="breaking-changes">Breaking changes</h2>
+<p>We have tried to ensure that there are no breaking changes while upgrading to v3. However, in case you need migration assistance please reach out to us on our new <a href="https://discord.com/channels/618399631038218240/1093179421508243596">Nightwatch v3 channel on Discord</a></p>
+</p>
+            </div>
+        
+            <div class="d-flex justify-content-between">
                 <h3 id="v3.0.0 - Beta 1" class="mb-1"><a name="v3.0.0 - Beta 1" href="https://github.com/nightwatchjs/nightwatch/releases/tag/v3.0.0-beta.1">v3.0.0 - Beta 1</a></h3>
                 <em>May 16, 2023</em>
             </div>
@@ -1241,18 +1310,6 @@
 </p>
             </div>
         
-            <div class="d-flex justify-content-between">
-                <h3 id="v2.6.1" class="mb-1"><a name="v2.6.1" href="https://github.com/nightwatchjs/nightwatch/releases/tag/v2.6.1">v2.6.1</a></h3>
-                <em>Dec 28, 2022</em>
-            </div>
-            <div class="list-group-item">
-                <p class="mb-1"><ul>
-<li>fixed an issue with <code>.within()</code> command for component tests</li>
-<li>fixed an issue with <code>expect.element().value</code> – updated to use the getProperty(&#39;value&#39;) command;</li>
-</ul>
-</p>
-            </div>
-        
     </div>
     <h5 class="list-group-item list-group-item-action all-releases"><a href="https://github.com/nightwatchjs/nightwatch/releases" target="_blank">All releases</a></h5>
 </div></div>
@@ -1263,6 +1320,8 @@
                 <div class="wrapper">
                     <h5>On this page</h5>
                     <nav class="main-side-nav">
+                        
+                            <a href="#V3.0.1" class="nav-link">V3.0.1</a>
                         
                             <a href="#v3.0.0 - Beta 1" class="nav-link">v3.0.0 - Beta 1</a>
                         
@@ -1299,8 +1358,6 @@
                             <a href="#v2.6.4" class="nav-link">v2.6.4</a>
                         
                             <a href="#v2.6.3" class="nav-link">v2.6.3</a>
-                        
-                            <a href="#v2.6.1" class="nav-link">v2.6.1</a>
                         
                     </nav>
                     <h5>Contribute</h5>
