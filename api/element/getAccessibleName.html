@@ -899,12 +899,12 @@
             
                 
                     <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     browser.element(&#39;*[name=&#34;search&#34;]&#39;)
       .getAccessibleName()
       .assert.valueEquals(&#39;Country calling code&#39;);
   },
-  async demoTestAsync(browser: NightwatchClient): Promise&lt;void&gt; {
+  async demoTestAsync(browser: NightwatchAPI): Promise&lt;void&gt; {
     const result: string = await browser.element(&#39;*[name=&#34;search&#34;]&#39;).getAccessibleName();
     console.log(&#39;getAccessibleName is &#39;, result);
   }

@@ -899,13 +899,13 @@
             
                 
                     <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     browser.element(&#39;.features-container li:second-child&#39;).getPreviousElementSibling().then(resultElement =&gt; {
       console.log(&#39;previous sibling element Id:&#39;, resultElement.getId());
     });
   },
 
-  async demoTestAsync(browser: NightwatchClient): Promise&lt;void&gt; {
+  async demoTestAsync(browser: NightwatchAPI): Promise&lt;void&gt; {
     const resultElement = await browser.element(&#39;.features-container li:second-child&#39;).getPreviousElementSibling();
     console.log(&#39;previous sibling element Id:&#39;, resultElement.getId());
   }

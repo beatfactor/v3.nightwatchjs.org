@@ -900,10 +900,10 @@
             
                 
                     <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     browser.element(&#39;button.submit-form&#39;).doubleClick();
   },
-  async demoTestAsync(browser: NightwatchClient): Promise&lt;void&gt; {
+  async demoTestAsync(browser: NightwatchAPI): Promise&lt;void&gt; {
     await browser.element(&#39;button.submit-form&#39;).doubleClick();
   }
 }</code></pre>

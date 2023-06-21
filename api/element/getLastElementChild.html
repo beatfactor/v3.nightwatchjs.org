@@ -893,13 +893,13 @@
             
                 
                     <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     browser.element(&#39;.features-container&#39;).getLastElementChild().then(resultElement =&gt; {
       console.log(&#39;last child element Id:&#39;, resultElement.getId());
     });
   },
 
-  async demoTestAsync(browser: NightwatchClient): Promise&lt;void&gt; {
+  async demoTestAsync(browser: NightwatchAPI): Promise&lt;void&gt; {
     const resultElement = await browser.element(&#39;.features-container&#39;).getLastElementChild();
     console.log(&#39;last child element Id:&#39;, resultElement.getId());
   }

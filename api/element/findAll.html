@@ -900,7 +900,7 @@ Elements can be searched by using another element as the starting point.</p>
             
                 
                     <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default {
-  async demoTest(browser: NightwatchClient): Promise&lt;void&gt; {
+  async demoTest(browser: NightwatchAPI): Promise&lt;void&gt; {
     const buttonsElement = browser.element.findAll(&#39;button.submit-form&#39;);
 
     // Get an array of found elements.

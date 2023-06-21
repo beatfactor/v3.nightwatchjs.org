@@ -283,7 +283,7 @@
 </style>
     <link rel="canonical" href="http://127.0.0.1:5173/api/element/click.html"/>
 
-  <script type="module" crossorigin src="/assets/click-41e4e1c9.js"></script>
+  <script type="module" crossorigin src="/assets/click-490b75c7.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/LICENSE-c8ed837a.js">
   <link rel="modulepreload" crossorigin href="/assets/app-esm-20753772.js">
 <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
@@ -900,10 +900,10 @@ The element is scrolled into view if it is not already pointer-interactable. See
             
                 
                     <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     browser.element(&#39;button.submit-form&#39;).click();
   },
-  async demoTestAsync(browser: NightwatchClient): Promise&lt;void&gt; {
+  async demoTestAsync(browser: NightwatchAPI): Promise&lt;void&gt; {
     await browser.element(&#39;button.submit-form&#39;).click();
   }
 }</code></pre>

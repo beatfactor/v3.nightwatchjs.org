@@ -901,7 +901,7 @@ If many elements match the locating criteria, only first one is returned.</p>
             
                 
                     <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     // Using element function (alias for find).
     const button1 = browser.element(&#39;button.submit-form&#39;);
     // Using the find method of the element namespace.
@@ -912,7 +912,7 @@ If many elements match the locating criteria, only first one is returned.</p>
     // Use an object to customise locating behaviour.
     const main = browser.element({ selector: &#39;main&#39;, locateStrategy: &#39;css selector&#39; });
   },
-  async demoTestAsync(browser: NightwatchClient): Promise&lt;void&gt; {
+  async demoTestAsync(browser: NightwatchAPI): Promise&lt;void&gt; {
     // button is the WebElement object.
     const button = await browser.element(&#39;button.submit-form&#39;);
   }

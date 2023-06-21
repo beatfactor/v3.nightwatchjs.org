@@ -917,12 +917,12 @@
                     <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">import { NightwatchBrowser } from &#39;nightwatch&#39;;
 
 export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     const result = browser.element(&#39;#login input[type=text]&#39;).getProperty(&#39;classList&#39;);
     console.log(&#39;classList&#39;, result);
   },
 
-  async demoTestAsync(browser: NightwatchClient): Promise&lt;void&gt; {
+  async demoTestAsync(browser: NightwatchAPI): Promise&lt;void&gt; {
     const result = await browser.element(&#39;#login input[type=text]&#39;).getProperty(&#39;classList&#39;);
     console.log(&#39;classList&#39;, result);
   }

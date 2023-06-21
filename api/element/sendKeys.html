@@ -900,11 +900,11 @@
             
                 
                     <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     browser.element(&#39;input[type=text]&#39;).sendKeys(&#39;nightwatch&#39;);
   },
 
-  async demoTestAsync(browser: NightwatchClient): Promise&lt;void&gt; {
+  async demoTestAsync(browser: NightwatchAPI): Promise&lt;void&gt; {
     browser.element(&#39;input[type=text]&#39;).sendKeys(&#39;nightwatch&#39;);
   }
 }</code></pre>

@@ -898,12 +898,12 @@
             
                 
                     <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     const data = browser.element(&#39;#main&#39;).takeScreenshot();
     require(&#39;fs&#39;).writeFile(&#39;out.png&#39;, data, &#39;base64&#39;);
   },
 
-  async demoTestAsync(browser: NightwatchClient): Promise&lt;void&gt; {
+  async demoTestAsync(browser: NightwatchAPI): Promise&lt;void&gt; {
     const data = await browser.element(&#39;#main&#39;).takeScreenshot();
     require(&#39;fs&#39;).writeFile(&#39;out.png&#39;, data, &#39;base64&#39;);
   }

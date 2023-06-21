@@ -908,7 +908,7 @@ Elements can be searched by using another element as the starting point.</p>
             
                 
                     <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     const comboboxes = browser.element.findAllByRole(&#39;combobox&#39;);
 
     const headings = browser.element.findAllByRole(

@@ -901,7 +901,7 @@ If you need an exact comparison, provide the <code>{ exact: true }</code> as the
             
                 
                     <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     // Search by the substring matching.
     const inputs = browser.element.findByText(&#39;group of people&#39;);
 

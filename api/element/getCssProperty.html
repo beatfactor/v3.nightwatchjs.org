@@ -916,11 +916,11 @@
             
                 
                     <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">export default {
-  demoTest(browser: NightwatchClient): void {
+  demoTest(browser: NightwatchAPI): void {
     browser.element(&#39;#main ul li a.first&#39;).getCssProperty(&#39;display&#39;)
       .assert.valueEquals(&#39;block&#39;);
   },
-  async demoTestAsync(browser: NightwatchClient): Promise&lt;void&gt; {
+  async demoTestAsync(browser: NightwatchAPI): Promise&lt;void&gt; {
     const result = await browser.element(&#39;#main ul li a.first&#39;).getCssProperty(&#39;display&#39;);
     console.log(&#39;display&#39;, result);
   }
