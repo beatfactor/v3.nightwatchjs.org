@@ -283,9 +283,9 @@
         }
       </style>
 
-  <script type="module" crossorigin src="/assets/getting-started-df974ff0.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/dropdown-69afaef7.js">
-  <link rel="modulepreload" crossorigin href="/assets/app-esm-5227ca89.js">
+  <script type="module" crossorigin src="/assets/getting-started-490b75c7.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/LICENSE-c8ed837a.js">
+  <link rel="modulepreload" crossorigin href="/assets/app-esm-20753772.js">
 <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
 
 <body>
@@ -403,7 +403,7 @@
         <li><a class="navigation-link active"
             href="/guide/overview/what-is-nightwatch.html">Guide</a></li>
         <li><a class="navigation-link " href="/api/">API</a></li>
-        <li><a class="navigation-link " href="/about/community/">Community</a></li>
+        <li><a class="navigation-link " href="/about/community/">About</a></li>
         <li><a class="navigation-link " href="/blog/">Blog</a></li>
       </ul>
       <ul class="navigation-list social">
@@ -450,16 +450,16 @@
             </svg>
           </button>
           <ul id="releaseVersionMenu" role="menu" aria-labelledby="releaseVersionButton">
-            <li role="menuitem"><a href="#!">Previous 2.6.19
+            <li role="menuitem"><a href="/v26/">Previous 2.6.19
               </a></li>
-            <li role="menuitem"><a href="#!">Version 1.7</a></li>
-            <li role="menuitem"><a href="#!">Version 0.9</a></li>
-            <li role="menuitem"><a href="#!">All versions</a></li>
+            <li role="menuitem"><a href="/v17/">Version 1.7</a></li>
+            <li role="menuitem"><a href="/v09/">Version 0.9</a></li>
+            <li role="menuitem"><a href="/guide/overview/whats-new.html">All versions</a></li>
           </ul>
         </li>
       </ul>
       <button class="navigation-menu-toggle" id="mobileMenuToggle">
-        <svg viewBox="0 0 12 10" class="hamburger" height="40px" width="40px">
+        <svg viewBox="0 0 12 10" class="hamburger" height="30px" width="30px">
             <path d="M10,2 L2,2" class="bar-1"></path>
             <path d="M2,5 L10,5" class="bar-2"></path>
             <path d="M10,8 L2,8" class="bar-3"></path>
@@ -472,7 +472,7 @@
       <ul>
         <li><a href="/guide/overview/what-is-nightwatch.html">Guide</a></li>
         <li><a href="/api/">API</a></li>
-        <li><a href="/about/community/">Community</a></li>
+        <li><a href="/about/community/">About</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="https://github.com/nightwatchjs/">Github</a></li>
         <li><a href="https://discord.com/invite/SN8Da2X">Discord</a></li>
@@ -1152,11 +1152,7 @@
         </div>
         <div class="footer__wrapper-inner-social-subscribe">
           <h3 class="footer__wrapper-inner-social-subscribe-title">Subscribe to our newsletter</h3>
-          <form action="#" class="footer__wrapper-inner-social-subscribe-form">
-            <input type="email" class="footer__wrapper-inner-social-subscribe-input"
-              placeholder="Type your email...">
-            <button class="footer__wrapper-inner-social-subscribe-btn">Subscribe</button>
-          </form>
+          <iframe loading="lazy" src="https://nightwatch.substack.com/embed" width="80%" height="125px" style="border-radius: 25px; background: #1B1B1B" id="substack"  frameborder="0" scrolling="no" title="nightwatch-substack"></iframe>
         </div>
         <div class="footer__wrapper-inner-social-links">
           <a href="https://github.com/nightwatchjs/nightwatch" target="_blank">
@@ -1362,29 +1358,45 @@
 
 <script src="https://www.googletagmanager.com/gtm.js?id=GTM-MWC4FHS"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
-<script>
-  docsearch({
-    //appId: 'H6WO0X38VS',
-    //apiKey: '5784b55341d8e08305fc280817fbda21',
-    indexName: 'nightwatchjs',
-    container: '#docsearch',
-    apiKey: '37c74f46d0eab021bc430dc17ebfc089',
-    // indexName: 'nightwatchjs',
-    transformItems: function (items) {
-      return items.map(function (item) {
-        if (!item.content) {
-          item.content = item.url.replace('#apimethod-page', '');
-        }
-        if (item.hierarchy && !item.hierarchy.lvl1) {
-          item.hierarchy.lvl1 = item.content.replace('https://nightwatchjs.org/', '');
-          item.type = 'lvl1';
-        }
-        return item;
+<script type="text/javascript">
+  function docReady(fn) {
+    // see if DOM is already available
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      // call on next available tick
+      setTimeout(fn, 1);
+    } else {
+      document.addEventListener('DOMContentLoaded', fn);
+    }
+  }
+
+  function addScript(src, id, callback) {
+    let tag = document.createElement('script');
+    if (typeof id !== 'undefined' && id !== null) {
+      tag.id = id;
+    }
+    tag.src = src;
+    tag.async = true;
+    let firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    if (typeof callback !== 'undefined' && callback !== null) {
+      tag.addEventListener('load', function () {
+        callback();
       });
-    },
-    debug: false
-  });
+    }
+  }
+
+  function addStylesheet(src) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = src
+    document.head.appendChild(link);
+  }
+
+  function render(template, node) {
+    if (!node) return;
+    node.insertAdjacentHTML('afterend', template);
+  };
 </script>
 
 

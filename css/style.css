@@ -49,9 +49,9 @@ a {
 
 /* Navigation section start */
 .navigation__logo {
-  width: 242px;
+  width: 200px;
   margin-right: auto;
-  padding: 10px 0;
+  padding: 16px 0;
 }
 
 .navigation__logo svg {
@@ -104,7 +104,7 @@ a {
 
 .navigation-list:last-of-type {
   gap: 32px;
-  padding-left: 52px;
+  padding-left: 32px;
 }
 
 .navigation-list>li button {
@@ -226,7 +226,7 @@ a {
   display: flex;
   justify-content: center;
   height: 100%;
-  padding: 113px 32px;
+  padding: 92px 32px;
 }
 
 .mobile-navbar-wrapper ul {
@@ -2333,6 +2333,10 @@ section.secondary h1 {
 }
 
 @media (max-width: 480px) {
+  .navigation__logo {
+    width: 170px;
+  }
+
   .doc-container.top-border .doc-sidebar {
     border-radius: 0;
   }
@@ -2947,7 +2951,7 @@ p.bottom-text {
 .footer-landing {
   background: var(--footer-background-color);
   border-radius: 30px;
-  margin: 40px 20px 20px 20px;
+  margin: 0 20px 20px 20px;
   position: relative;
 }
 
@@ -3107,7 +3111,7 @@ p.bottom-text {
 .footer__wrapper-inner-social-subscribe-btn {
   background: var(--button-background-color-dark);
   border-radius: 4.3px;
-  border: 0.752783px solid var(--button-border-color-dark);
+  border: 0.752783px solid var(--button-border-color);
   box-shadow: inset 0px -3.28005px 0px var(--button-border-color);
   color: var(--background-color);
   font-family: var(--font-family-code);
@@ -3139,6 +3143,7 @@ p.bottom-text {
 
 .footer__wrapper-inner-social-links a {
   height: 28px;
+  width: 28px;
 }
 
 .footer__wrapper-inner-social-links svg {
@@ -3160,6 +3165,7 @@ p.bottom-text {
   font-weight: 600;
   line-height: var(--line-height-base);
   opacity: 0.9;
+  width: 60%;
 }
 
 .footer__wrapper-bottom-text a {
@@ -3170,6 +3176,11 @@ p.bottom-text {
 
 .footer__wrapper-bottom-text-about {
   padding-bottom: 32px;
+}
+
+.footer__wrapper-bottom-logo {
+  height: 0%;
+  width: 20%;
 }
 
 .footer__wrapper-bottom-logo-mobile {
@@ -3211,7 +3222,12 @@ p.bottom-text {
   }
 
   .footer__wrapper-bottom-logo-mobile {
-    width: 35%;
+    width: 12%;
+    display: unset;
+  }
+
+  .footer__wrapper-bottom-text {
+    width: 72%;
   }
 }
 
