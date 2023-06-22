@@ -283,9 +283,9 @@
 </style>
     <link rel="canonical" href="http://127.0.0.1:5173/api/ensure.html"/>
 
-  <script type="module" crossorigin src="/assets/ensure-beb76bda.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/README-e4c34b63.js">
-  <link rel="modulepreload" crossorigin href="/assets/app-esm-96ad472b.js">
+  <script type="module" crossorigin src="/assets/ensure-b40079e4.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/index-8fb8d7bd.js">
+  <link rel="modulepreload" crossorigin href="/assets/app-esm-288bbb06.js">
 <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
 
 <body>
@@ -458,7 +458,7 @@
           </ul>
         </li>
       </ul>
-      <button class="navigation-menu-toggle" id="mobileMenuToggle">
+      <button class="navigation-menu-toggle" id="mobileMenuToggle" aria-label="Mobile menu Button">
         <svg viewBox="0 0 12 10" class="hamburger" height="30px" width="30px">
             <path d="M10,2 L2,2" class="bar-1"></path>
             <path d="M2,5 L10,5" class="bar-2"></path>
@@ -1784,9 +1784,9 @@ None
     // see if DOM is already available
     if (document.readyState === 'complete' || document.readyState === 'interactive') {
       // call on next available tick
-      setTimeout(fn, 1);
+      setTimeout(fn, 100);
     } else {
-      document.addEventListener('DOMContentLoaded', fn);
+      document.addEventListener('load', fn);
     }
   }
 
